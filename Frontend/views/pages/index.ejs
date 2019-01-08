@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <% include ../partials/head %>
+      <% include ../partials/map %>
+  </head>
+  <body class="container">
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <main>
+        <div class="jumbotron">
+            <p>Enter the Weibo content:</p>
+            <form method="get" action="/analysis">
+              <div class="form-group">
+                <textarea class="form-control" name="weibo_content" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            <p></p>
+            <p>Result: </p>
+            <% if (result) { %>
+            Class: <%= result.data %></br>
+            Input: <%= result.input %></br>
+            Probability of health: <%= result.health_prob %></br>
+            Probability of technology: <%= result.tech_prob %></br>
+            Probability of design: <%= result.design_prob %></br>
+            <% } %>
+        </div>
+    </main>
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+  </body>
+</html>
