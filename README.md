@@ -1,6 +1,6 @@
 # Simple LSTM Weibo Text Classification
 
-This a simple text classification project through LSTM. The model used Keras framework in Python to train. This project will simply included two parts - Backend and Front-end.
+This is a simple text classification project through LSTM. The model used Keras framework in Python to train. This project will simply included two parts - Backend and Front-end.
 
 The Backend folder included the trained model and the API server.
 
